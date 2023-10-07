@@ -3607,8 +3607,19 @@
 }
 /** Style 6 **/
 .pbmit-service-style-6 .pbmit-featured-img-wrapper{
-	display: none;
+	/*display: none;*/
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;        /* 确保图片位于其他内容的后面 */
 	position: absolute;
+}
+.pbmit-service-style-6 .pbmit-featured-img-wrapper img {
+	width: 100%;        /* 图片宽度为父元素的100% */
+	height: 100%;       /* 图片高度为父元素的100% */
+	object-fit: cover;  /* 保持图片的纵横比并填充其容器 */
+	filter: grayscale(80%) brightness(30%); /* 添加灰色滤镜并降低亮度 */
 }
 .pbmit-service-style-6 .pbminfotech-post-item{
 	padding: 90px;
@@ -14026,7 +14037,7 @@ ul.list-group.list-group-borderless {
     transform: translate(-50%,-50%);
     width: 100vw;
     height: 100vh;
-    height: calc(var(--vh,1vh)*100);
+    /*height: calc(var(--vh,1vh)*100);*/
 }
 .pbmit-element-reel-video-style-2 .pbmit-video-wrapper iframe{
 	position: absolute;

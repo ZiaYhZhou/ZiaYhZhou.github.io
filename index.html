@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Creative Studio – Creative Multipurpose HTML Template</title>
+  <title>Kan Lab @ BJFU#Tech Forestry Engineering</title>
   <meta name="robots" content="noindex, follow">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -37,6 +37,104 @@
   <link rel="stylesheet" href="css/style.css">
   <!-- Responsive CSS -->
   <link rel="stylesheet" href="css/responsive.css">
+<!--弹出窗口脚本-->
+  <link rel="stylesheet" href="css/FrostModals.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+  <style>
+    .fmodal-wrapper {
+      width: 100%;
+      height: 100%;
+      /*background: rgba(0, 0, 0, .2);*/
+      position: fixed; /* 修改为fixed */
+      left: 0;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      animation: fadeIn .25s ease 0s 1 normal forwards;
+      opacity: 0;
+      backdrop-filter: blur(5px); /* 添加模糊效果 */
+      background: rgba(0, 0, 0, .5); /* 增加不透明度 */
+    }
+
+    .fmodal-wrapper .fmodal-container {
+      width: 70%; /* 增加宽度，例如70% */
+      overflow-y: auto; /* 添加垂直滚动条 */
+      max-height: 90%; /* 设置最大高度，以确保模态窗口不会超出视口 */
+    }
+    .fmodal-wrapper .fmodal-container .fmodal-header .fmodal-close {
+      display: none; /* 隐藏叉号 */
+    }
+    /* 修改默认按钮的背景颜色 */
+    .fmodal-wrapper .fmodal-container .fmodal-button {
+      background: #006636; /* 替换#YOUR_COLOR为您想要的颜色 */
+    }
+
+    /* 修改按钮在悬停状态时的背景颜色 */
+    .fmodal-wrapper .fmodal-container .fmodal-button:hover {
+      background: #006636; /* 替换#YOUR_HOVER_COLOR为您在悬停时想要的颜色 */
+    }
+
+    .modal-content {
+      font-family: 'Arial', sans-serif;
+      background-color: #ffffff;
+      margin: 40px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .modal-content h1, .modal-content h2 {
+      color: #2c3e50;
+    }
+
+    .modal-content span {
+      color: #3498db;
+    }
+
+    .modal-content strong {
+      color: #3498db;
+    }
+
+    .modal-content ul {
+      list-style-type: square;
+    }
+
+    /* ============== 字体变换特效 ============== */
+    @font-face {
+      src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2") format("woff2");
+      font-family: "Meta";
+      font-style: normal;
+      font-weight: normal;
+
+    }
+    .trans_type {
+      transition: all .5s;
+      /*min-width: 2000px;*/
+      -webkit-text-stroke: 0.83px #d6f4f4;
+      font-variation-settings: "wght" 700,"ital" 5;
+      font-size: 80px;
+      text-align: left;
+      color: transparent;
+
+      font-family: "Caveat",sans-serif;
+      text-shadow: 2.08px 2.08px 0 #07bccc, 3.12px 3.12px 0 #e601c0, 4.17px 4.17px 0 #e9019a, 5.21px 5.21px 0 #f40468, 9.38px 9.38px 2.08px #482896;
+      cursor: pointer;
+    }
+    .trans_type:hover {
+
+      font-variation-settings: "wght" 100,"ital" 0;
+      text-shadow: none;
+    }
+
+
+  </style>
+
 
 </head>
 <body>
@@ -66,162 +164,27 @@
                     <div class="collapse navbar-collapse clearfix show" id="pbmit-menu">
                       <div class="pbmit-menu-wrap">
                                           <span class="closepanel">
-                                             <svg class="qodef-svg--close qodef-m" xmlns="https://www.w3.org/2000/svg" width="20.163" height="20.163" viewBox="0 0 26.163 26.163">
+                                            <svg class="qodef-svg--close qodef-m" xmlns="http://www.w3.org/2000/svg" width="20.163" height="20.163" viewBox="0 0 26.163 26.163">
+
+<!--                                             <svg class="qodef-svg&#45;&#45;close qodef-m" xmlns="https://www.w3.org/2000/svg" width="20.163" height="20.163" viewBox="0 0 26.163 26.163">-->
                                                 <rect width="36" height="1" transform="translate(0.707) rotate(45)"></rect>
                                                 <rect width="36" height="1" transform="translate(0 25.456) rotate(-45)"></rect>
                                              </svg>
                                           </span>
                         <ul class="navigation clearfix">
-                          <li class="dropdown active">
-                            <a href="digital-agency.html">Home</a>
-                            <ul>
-                              <li class="mega-menu-column">
-                                <ul>
-                                  <li><a href="digital-agency.html">Digital Agency</a></li>
-                                  <li><a href="digital-studio.html">Digital Studio</a></li>
-                                  <li><a href="digital-marketing.html">Digital Marketing</a></li>
-                                  <li><a href="modern-agency.html">Modern Agency</a></li>
-                                  <li><a href="personal-portfolio-01.html">Personal Portfolio 01</a></li>
-                                  <li class="active"><a href="creative-studio.html">Creative Studio</a></li>
-                                </ul>
-                              </li>
-                              <li class="mega-menu-column">
-                                <ul>
-                                  <li><a href="modern-digital-agency.html">Modern Digital Agency</a></li>
-                                  <li><a href="web-agency.html">Web Agency</a></li>
-                                  <li><a href="development-agency.html">Development Agency</a></li>
-                                  <li><a href="web-design-solution.html">Web Design Solution</a></li>
-                                  <li><a href="marketing-solution.html">Marketing Solution</a></li>
-                                  <li><a href="web-development.html">Web Development</a></li>
-                                </ul>
-                              </li>
-                              <li class="mega-menu-column">
-                                <ul>
-                                  <li><a href="personal-portfolio-02.html">Personal Portfolio 02</a></li>
-                                  <li><a href="horizontal-project.html">Horizontal Project</a></li>
-                                  <li><a href="vertical-project.html">Vertical Project</a></li>
-                                  <li><a href="vertical-split-slider.html">Vertical Split Slider</a></li>
-                                  <li><a href="horizontal-scroll.html">Horizontal Scroll</a></li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="dropdown">
-                            <a href="#">Pages</a>
-                            <ul>
-                              <li><a href="about-us-1.html">About Us 1</a></li>
-                              <li><a href="about-us-2.html">About Us 2</a></li>
-                              <li><a href="our-history.html">Our History</a></li>
-                              <li><a href="our-team-member.html">Our Team Member</a></li>
-                              <li><a href="team-single-detail.html">Team Single Detail</a></li>
-                              <li><a href="faq.html">Faq</a></li>
-                            </ul>
-                          </li>
-                          <li class="dropdown">
-                            <a href="#">Services</a>
-                            <ul>
-                              <li><a href="service-details.html">Service Detail</a></li>
-                            </ul>
-                          </li>
-                          <li class="dropdown">
-                            <a href="#">Portfolio</a>
-                            <ul>
-                              <li class="dropdown">
-                                <a href="#">Grid View</a>
-                                <ul>
-                                  <li><a href="portfolio-grid-col-2.html">Grid Col-2</a></li>
-                                  <li><a href="portfolio-grid-col-3.html">Grid Col-3</a></li>
-                                  <li><a href="portfolio-grid-col-4.html">Grid Col-4</a></li>
-                                  <li><a href="portfolio-grid-col-wide.html">Grid col wide</a></li>
-                                  <li><a href="portfolio-grid-no-gap.html">Grid no gap</a></li>
-                                </ul>
-                              </li>
-                              <li class="dropdown">
-                                <a href="#">Sortable View</a>
-                                <ul>
-                                  <li><a href="sortable-grid-col-2.html">Grid Col-2</a></li>
-                                  <li><a href="sortable-grid-col-3.html">Grid Col-3</a></li>
-                                  <li><a href="sortable-grid-col-4.html">Grid Col-4</a></li>
-                                </ul>
-                              </li>
-                              <li class="dropdown">
-                                <a href="#">Single Detail Style</a>
-                                <ul>
-                                  <li><a href="single-detail-1.html">Single Detail Style 1</a></li>
-                                  <li><a href="single-detail-2.html">Single Detail Style 2</a></li>
-                                  <li><a href="single-detail-3.html">Single Detail Style 3</a></li>
-                                  <li><a href="single-detail-4.html">Single Detail Style 4</a></li>
-                                  <li><a href="single-detail-5.html">Single Detail Style 5</a></li>
-                                  <li><a href="single-detail-6.html">Single Detail Style 6</a></li>
-                                  <li><a href="single-detail-7.html">Single Detail Style 7</a></li>
-                                  <li><a href="single-detail-8.html">Single Detail Style 8</a></li>
-                                  <li><a href="single-detail-9.html">Single Detail Style 9</a></li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="dropdown">
-                            <a href="#">Blog</a>
-                            <ul>
-                              <li class="dropdown">
-                                <a href="#">Masonry Grid</a>
-                                <ul>
-                                  <li><a href="blog-masonry-col-2.html">Masonry Col-2</a></li>
-                                  <li><a href="blog-masonry-col-3.html">Masonry Col-3</a></li>
-                                  <li><a href="blog-masonry-col-4.html">Masonry Col-4</a></li>
-                                  <li><a href="blog-masonry-wide.html">Masonry Wide</a></li>
-                                </ul>
-                              </li>
-                              <li class="dropdown">
-                                <a href="#">Grid View</a>
-                                <ul>
-                                  <li><a href="blog-grid-col-2.html">Grid Col-2</a></li>
-                                  <li><a href="blog-grid-col-3.html">Grid Col-3</a></li>
-                                  <li><a href="blog-grid-col-4.html">Grid Col-4</a></li>
-                                  <li><a href="blog-sortable-view.html">Sortable View</a></li>
-                                </ul>
-                              </li>
-                              <li class="dropdown">
-                                <a href="#">Sidebar Grid View</a>
-                                <ul>
-                                  <li><a href="left-sidebar.html">Left Sidebar View</a></li>
-                                  <li><a href="right-sidebar.html">Right Sidebar View</a></li>
-                                </ul>
-                              </li>
-                              <li><a href="blog-classic.html">Blog Classic</a></li>
-                              <li><a href="blog-single-details.html">Blog Single Details</a></li>
-                            </ul>
-                          </li>
-                          <li class="dropdown">
-                            <a href="#">Contact</a>
-                            <ul>
-                              <li><a href="contact-us-1.html">Contact Us 1</a></li>
-                              <li><a href="contact-us-2.html">Contact Us 2</a></li>
-                            </ul>
-                          </li>
+                          <!-- 新添加的导航项 -->
+                          <li><a href="#">Home</a></li>
+                          <li><a href="#research_interests">Research Interests</a></li>
+                          <li><a href="#project">Project</a></li>
+                          <li class="dropdown active"><a href="#people">People</a></li>
+                          <li><a href="#">Publications</a></li>
+                          <li><a href="#apply">Join us</a></li>
+                          <li><a href="#Contact">Contact</a></li>
                         </ul>
                       </div>
                     </div>
                   </nav>
                 </div>
-<!--                <div class="pbmit-right-box">-->
-<!--                  <div class="pbmit-header-button2 creative-studio-button">-->
-<!--                    <a href="contact-us-2.html">-->
-<!--                      <span class="pbmit-header-button2-text">Get A Quote</span>-->
-<!--                    </a>-->
-<!--                  </div>-->
-<!--                  <div class="pbmit-header-search-btn">-->
-<!--                    <a href="#">-->
-<!--                      <i class="pbmit-base-icon-search-1"></i>-->
-<!--                    </a>-->
-<!--                  </div>-->
-<!--                  <div class="navbar-header">-->
-<!--                    &lt;!&ndash; Toggle Button &ndash;&gt;-->
-<!--                    <button class="navbar-toggler" type="button">-->
-<!--                      <i class="pbmit-base-icon-menu-1"></i>-->
-<!--                    </button>-->
-<!--                  </div>-->
-<!--                </div>-->
               </div>
             </div>
           </div>
@@ -240,11 +203,11 @@
         <div class="row g-0">
           <div class="col-md-3 pbmit-col-left">
             <div class="first-image-wrapper">
-              <div class="pbmit-tween-efect pbmit-tween-effect-style-1">
-                <div class="tween-text tween-image pbmit-tween-effect" data-x-start="0" data-x-end="0" data-y-start="-10" data-y-end="20" data-scale-x-start="1" data-scale-x-end=" 1" data-skew-x-start=" 0deg" data-skew-x-end="0deg" data-skew-y-start=" 0deg" data-skew-y-end=" 0deg" data-rotate-x-start="0" data-rotate-x-end="0">
-                  <img src="images/creative-studio/img1demo5.jpg" class="img-fluid" alt="" />
-                </div>
-              </div>
+<!--              <div class="pbmit-tween-efect pbmit-tween-effect-style-1">-->
+<!--                <div class="tween-text tween-image pbmit-tween-effect" data-x-start="0" data-x-end="0" data-y-start="-10" data-y-end="20" data-scale-x-start="1" data-scale-x-end=" 1" data-skew-x-start=" 0deg" data-skew-x-end="0deg" data-skew-y-start=" 0deg" data-skew-y-end=" 0deg" data-rotate-x-start="0" data-rotate-x-end="0">-->
+<!--                  <img src="images/creative-studio/team/kanjiangming.jpg" class="img-fluid" alt="" />-->
+<!--                </div>-->
+<!--              </div>-->
             </div>
           </div>
           <div class="col-md-5 pbmit-col-main">
@@ -259,11 +222,11 @@
           </div>
           <div class="col-md-4 pbmit-col-right">
             <div class="second-image-wrapper">
-              <div class="pbmit-tween-efect pbmit-tween-effect-style-1">
-                <div class="tween-text tween-image pbmit-tween-effect" data-x-start="0" data-x-end="0" data-y-start="-10" data-y-end="20" data-scale-x-start="1" data-scale-x-end=" 1" data-skew-x-start=" 0deg" data-skew-x-end="0deg" data-skew-y-start=" 0deg" data-skew-y-end=" 0deg" data-rotate-x-start="0" data-rotate-x-end="0">
-                  <img src="images/creative-studio/img2demo5.jpg" class="img-fluid" alt="" />
-                </div>
-              </div>
+<!--              <div class="pbmit-tween-efect pbmit-tween-effect-style-1">-->
+<!--                <div class="tween-text tween-image pbmit-tween-effect" data-x-start="0" data-x-end="0" data-y-start="-10" data-y-end="20" data-scale-x-start="1" data-scale-x-end=" 1" data-skew-x-start=" 0deg" data-skew-x-end="0deg" data-skew-y-start=" 0deg" data-skew-y-end=" 0deg" data-rotate-x-start="0" data-rotate-x-end="0">-->
+<!--                  <img src="images/creative-studio/forest_point_cloud.png" class="img-fluid" alt="" />-->
+<!--                </div>-->
+<!--              </div>-->
             </div>
           </div>
         </div>
@@ -280,7 +243,9 @@
           <div class="pbmit-element-marquee-movetext-style-1">
             <div class="pbmit-element-inner">
               <div class="pbmit-move-marquee" data-backspace-count="16" data-type-svg="pbmit_wave">
-                <svg class="pbmitSvg" width="100%" height="100%" viewBox="0 0 1516 92" fill="none" xmlns="https://www.w3.org/2000/svg">
+                <svg class="pbmitSvg" width="100%" height="100%" viewBox="0 0 1516 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                <!--                <svg class="pbmitSvg" width="100%" height="100%" viewBox="0 0 1516 92" fill="none" xmlns="https://www.w3.org/2000/svg">-->
                   <g>
                     <path id="pbmitpath" d="M-724.4,671.5c47.9,17.5,93.6,25.9,139.6,25.9c105.3,0,186.5-43.2,272.5-88.9
                                        c86.4-45.9,175.7-93.4,290.1-93.4s203.8,47.5,290.1,93.4c86,45.7,167.2,88.9,272.5,88.9c105.3,0,186.5-43.2,272.5-88.9
@@ -336,122 +301,21 @@
     </section>
     <!-- MarqueeOver-Text End -->
 
-    <!-- Flipbox Start -->
-    <section class="creative-studio-flipbox">
+    <!-- Research Interests Start -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <section class="creative-studio-flipbox" id="research_interests">
       <div class="container">
         <div class="row g-0">
           <div class="col-md-6 pbmit-column-inner">
             <div class="pbmit-heading-subheading text-global animation-style2">
 <!--              <h4 class="pbmit-subtitle">Awards</h4>-->
-              <h2 class="pbmit-title"><span class="pbmit-globalcolor">Research Interests </span>in<br>FESIP laboratory.</h2>
+              <h2 class="pbmit-title"><span class="pbmit-globalcolor">Research Interests </span>in<br>FESIP laboratory:</h2>
             </div>
           </div>
-
-          <article class="col-md-3 pbmit-column-inner pbmit-flip-box-style-4">
-            <div class="pbmit-flip-box-heading">
-              <div class="pbmit-iconbox">
-                <div class="pbmit-flip-box-image">
-                  <div class="pbmit-flip-box-image-wrapper pbmit-flip-box-icon-type-image">
-                    <div class="pbmit-contant-box">
-                      <h3 class="pbmit-service-title"><a href="service-details.html">Forest engineering equipment and its automation</a></h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="pbmit-flip-box-contents">
-                <div class="pbmit-flipbox-inner">
-                  <h2 class="pbmit-element-title">Forest production mechanization and automation</h2>
-<!--                  Forest production mechanization and automation-->
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="col-md-3 pbmit-column-inner pbmit-flip-box-style-4">
-            <div class="pbmit-flip-box-heading">
-              <div class="pbmit-iconbox">
-                <div class="pbmit-flip-box-image">
-                  <div class="pbmit-flip-box-image-wrapper pbmit-flip-box-icon-type-image">
-                    <div class="pbmit-contant-box">
-                      <h3 class="pbmit-service-title"><a href="service-details.html">Information monitoring of forests and their environment</a></h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="pbmit-flip-box-contents">
-                <div class="pbmit-flipbox-inner">
-                  <h2 class="pbmit-element-title">Intelligent foundation of forestry equipment</h2>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="col-md-3 pbmit-column-inner"></article>
-
-<!--          <article class="col-md-3 pbmit-column-inner pbmit-flip-box-style-4">-->
-<!--            <div class="pbmit-flip-box-heading">-->
-<!--              <div class="pbmit-iconbox">-->
-<!--                <div class="pbmit-flip-box-image">-->
-<!--                  <div class="pbmit-flip-box-image-wrapper pbmit-flip-box-icon-type-image">-->
-<!--                    <img src="images/creative-studio/fbox3.png" alt="" />-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--              <div class="pbmit-flip-box-contents">-->
-<!--                <div class="pbmit-flipbox-inner">-->
-<!--                  <h2 class="pbmit-element-title">Star Employee</h2>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </article>-->
-
-          <article class="col-md-3 pbmit-column-inner pbmit-flip-box-style-4">
-            <div class="pbmit-flip-box-heading">
-              <div class="pbmit-iconbox">
-                <div class="pbmit-flip-box-image">
-                  <div class="pbmit-flip-box-image-wrapper pbmit-flip-box-icon-type-image">
-                    <div class="pbmit-contant-box">
-                      <h3 class="pbmit-service-title"><a href="service-details.html">Man-machine environment engineering</a></h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="pbmit-flip-box-contents">
-                <div class="pbmit-flipbox-inner">
-                  <h2 class="pbmit-element-title">Safety and comfort of forestry equipment</h2>
-                  <!--                  Safety and comfort of forestry equipment-->
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="col-md-3 pbmit-column-inner pbmit-flip-box-style-4">
-            <div class="pbmit-flip-box-heading">
-              <div class="pbmit-iconbox">
-                <div class="pbmit-flip-box-image">
-                  <div class="pbmit-flip-box-image-wrapper pbmit-flip-box-icon-type-image">
-<!--                    <img src="images/creative-studio/fbox5.png" alt="" />-->
-                    <div class="pbmit-contant-box">
-                      <h3 class="pbmit-service-title"><a href="service-details.html">Robotics in Forestry Environments</a></h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="pbmit-flip-box-contents">
-                <div class="pbmit-flipbox-inner">
-                  <h2 class="pbmit-element-title">Frontiers of forestry equipment science and technology</h2>
-<!--                  Frontiers of forestry equipment science and technology-->
-                </div>
-              </div>
-            </div>
-          </article>
-
         </div>
       </div>
     </section>
-    <!-- Flipbox End -->
-
-    <!-- Service Start -->
     <section class="section-lgx">
       <div class="container-fluid g-0">
         <div class="swiper-slider" data-loop="true" data-autoplay="false" data-dots="false" data-arrows="false" data-columns="4" data-margin="0" data-effect="slide">
@@ -461,17 +325,20 @@
               <div class="pbminfotech-post-item">
                 <div class="pbmit-featured-img-wrapper">
                   <div class="pbmit-featured-wrapper">
-                    <img src="images/creative-studio/service/service-01.jpg" class="img-fluid" alt="" />
+                    <img src="images/creative-studio/service/automation.jpg" class="img-fluid" alt="" />
                   </div>
                 </div>
                 <div class="pbminfotech-box-content">
                   <div class="pbmit-service-icon-wrapper">
-                    <i class="pbmit-digiwize-icon pbmit-digiwize-icon-customer-behavior"></i>
+                    <span class="material-icons" style="font-size: 72px;">engineering</span>
+
+                    <!--                    <span class="material-icons"> forest </span>-->
+<!--                    <i class="pbmit-digiwize-icon pbmit-digiwize-icon-customer-behavior"></i>-->
                   </div>
                   <div class="pbmit-contant-box">
-                    <h3 class="pbmit-service-title"><a href="service-details.html">Forest engineering equipment and its automation</a></h3>
+                    <h3 class="pbmit-service-title"><a href="#RI_ForestryEng" data-modal-content="RI_ForestryEng">Forest engineering equipment and its automation</a></h3>
                     <div class="pbmit-service-content">
-                      <p>Forest production mechanization and automation</p>
+                      <p>"The future of forestry, led by automation!"</p>
                     </div>
                   </div>
                 </div>
@@ -482,17 +349,18 @@
               <div class="pbminfotech-post-item">
                 <div class="pbmit-featured-img-wrapper">
                   <div class="pbmit-featured-wrapper">
-                    <img src="images/creative-studio/service/service-02.jpg" class="img-fluid" alt="" />
+                    <img src="images/creative-studio/service/manMachine.jpg" class="img-fluid" alt="" />
                   </div>
                 </div>
                 <div class="pbminfotech-box-content">
                   <div class="pbmit-service-icon-wrapper">
-                    <i class="pbmit-digiwize-icon pbmit-digiwize-icon-statistics"></i>
+<!--                    <i class="pbmit-digiwize-icon pbmit-digiwize-icon-statistics"></i>-->
+                    <span class="material-icons" style="font-size: 72px;">computer</span>
                   </div>
                   <div class="pbmit-contant-box">
-                    <h3 class="pbmit-service-title"><a href="service-details.html">Man-machine environment engineering</a></h3>
+                    <h3 class="pbmit-service-title"><a href="#RI_ManMachine" data-modal-content="RI_ManMachine">Man-machine environment engineering</a></h3>
                     <div class="pbmit-service-content">
-                      <p>Safety and comfort of forestry equipment</p>
+                      <p>"Harmonious coexistence between man and machine, crafting the engineering marvels of the future!"</p>
                     </div>
                   </div>
                 </div>
@@ -503,17 +371,18 @@
               <div class="pbminfotech-post-item">
                 <div class="pbmit-featured-img-wrapper">
                   <div class="pbmit-featured-wrapper">
-                    <img src="images/creative-studio/service/service-03.jpg" class="img-fluid" alt="" />
+                    <img src="images/creative-studio/service/forest_point_cloud.png" class="img-fluid" alt="" />
                   </div>
                 </div>
                 <div class="pbminfotech-box-content">
                   <div class="pbmit-service-icon-wrapper">
-                    <i class="pbmit-digiwize-icon pbmit-digiwize-icon-analytics"></i>
+<!--                    <i class="pbmit-digiwize-icon pbmit-digiwize-icon-analytics"></i>-->
+                    <span class="material-icons" style="font-size: 72px;">forest</span>
                   </div>
                   <div class="pbmit-contant-box">
-                    <h3 class="pbmit-service-title"><a href="service-details.html">Information monitoring of forests and their environment</a></h3>
+                    <h3 class="pbmit-service-title"><a href="#RI_Information" data-modal-content="RI_Information">Information monitoring of forests and their environment</a></h3>
                     <div class="pbmit-service-content">
-                      <p>Intelligent foundation of forestry equipment</p>
+                      <p>"Guarding forests with data, letting every leaf be heard!"</p>
                     </div>
                   </div>
                 </div>
@@ -524,17 +393,18 @@
               <div class="pbminfotech-post-item">
                 <div class="pbmit-featured-img-wrapper">
                   <div class="pbmit-featured-wrapper">
-                    <img src="images/creative-studio/service/service-04.jpg" class="img-fluid" alt="" />
+                    <img src="images/creative-studio/service/robotic.png" class="img-fluid" alt="" />
                   </div>
                 </div>
                 <div class="pbminfotech-box-content">
                   <div class="pbmit-service-icon-wrapper">
-                    <i class="pbmit-digiwize-icon pbmit-digiwize-icon-web-development"></i>
+                    <span class="material-icons" style="font-size: 72px;">precision_manufacturing</span>
+<!--                    <i class="pbmit-digiwize-icon pbmit-digiwize-icon-web-development"></i>-->
                   </div>
                   <div class="pbmit-contant-box">
-                    <h3 class="pbmit-service-title"><a href="service-details.html">Forestry Robotics</a></h3>
+                    <h3 class="pbmit-service-title"><a href="#RI_Robotics" data-modal-content="RI_Robotics">Forestry Robotics</a></h3>
                     <div class="pbmit-service-content">
-                      <p>Frontiers of forestry equipment science and technology</p>
+                      <p>"Robots venture into the woods, paving the way for a greener future!"</p>
                     </div>
                   </div>
                 </div>
@@ -544,96 +414,101 @@
         </div>
       </div>
     </section>
-    <!-- Service End -->
+    <!-- Research Interests End -->
 
     <!-- Portfolio Start -->
-    <section class="section-lgb creative-studio-portfolio">
+    <section class="section-lgb creative-studio-portfolio" id="project">
       <div class="container">
         <div class="pbmit-heading-subheading text-global animation-style2">
-          <h4 class="pbmit-subtitle">Portfolio</h4>
-          <h2 class="pbmit-title">Works</h2>
+          <h4 class="pbmit-subtitle">Our Works</h4>
+          <h2 class="pbmit-title">Projects</h2>
         </div>
         <div class="pbmit-element-portfolio-style-12">
           <div class="row">
+
             <article class="col-md-6 pbmit-portfolio-style-12">
               <div class="pbminfotech-post-content">
                 <div class="pbmit-image-wrapper">
                   <div class="pbmit-featured-img-wrapper">
                     <div class="pbmit-featured-wrapper">
-                      <img src="images/creative-studio/portfolio/portfolio-08.jpg" class="img-fluid" alt="" />
+                      <img src="images/creative-studio/portfolio/rgbd.jpg" class="img-fluid" alt="" />
                     </div>
                   </div>
-                  <a class="pbmit-portfolio-btn" href="single-detail-1.html"><i class="pbmit-base-icon-bottom-right"></i></a>
+                  <a class="pbmit-portfolio-btn" href=""><i class="pbmit-base-icon-bottom-right"></i></a>
                 </div>
                 <div class="pbminfotech-box-content">
                   <div class="pbminfotech-titlebox">
-                    <h3 class="pbmit-portfolio-title"><a href="single-detail-1.html">Uniques</a></h3>
-                    <div class="pbmit-port-cat"><a href="portfolio-grid-col-3.html" rel="tag">Marketing</a></div>
+                    <h3 class="pbmit-portfolio-title"><a href="">DBH Measurements based on RGB-D</a></h3>
+                    <div class="pbmit-port-cat"><a href="" rel="tag">Jiaming Zhang</a></div>
                   </div>
                 </div>
-                <a class="pbmit-link" title="Uniques" href="single-detail-1.html"></a>
+                <a class="pbmit-link" title="Uniques" href=""></a>
               </div>
             </article>
+
             <article class="col-md-6 pbmit-portfolio-style-12">
               <div class="pbminfotech-post-content">
                 <div class="pbmit-image-wrapper">
                   <div class="pbmit-featured-img-wrapper">
                     <div class="pbmit-featured-wrapper">
-                      <img src="images/creative-studio/portfolio/portfolio-07.jpg" class="img-fluid" alt="" />
+                      <img src="images/creative-studio/portfolio/wuhuanzi.png" class="img-fluid" alt="" />
                     </div>
                   </div>
-                  <a class="pbmit-portfolio-btn" href="single-detail-2.html"><i class="pbmit-base-icon-bottom-right"></i></a>
+                  <a class="pbmit-portfolio-btn" href=""><i class="pbmit-base-icon-bottom-right"></i></a>
                 </div>
                 <div class="pbminfotech-box-content">
                   <div class="pbminfotech-titlebox">
-                    <h3 class="pbmit-portfolio-title"><a href="single-detail-2.html">Competitors</a></h3>
-                    <div class="pbmit-port-cat"><a href="portfolio-grid-col-3.html" rel="tag">Software</a></div>
+                    <h3 class="pbmit-portfolio-title"><a href="">Sapindales hulling machine</a></h3>
+                    <div class="pbmit-port-cat"><a href="" rel="tag">Software</a></div>
                   </div>
                 </div>
-                <a class="pbmit-link" title="Competitors" href="single-detail-2.html"></a>
+                <a class="pbmit-link" title="Competitors" href=""></a>
               </div>
             </article>
+
             <article class="col-md-6 pbmit-portfolio-style-12">
               <div class="pbminfotech-post-content">
                 <div class="pbmit-image-wrapper">
                   <div class="pbmit-featured-img-wrapper">
                     <div class="pbmit-featured-wrapper">
-                      <img src="images/creative-studio/portfolio/portfolio-06.jpg" class="img-fluid" alt="" />
+                      <img src="images/creative-studio/portfolio/vslam.png" class="img-fluid" alt="" />
                     </div>
                   </div>
-                  <a class="pbmit-portfolio-btn" href="single-detail-3.html"><i class="pbmit-base-icon-bottom-right"></i></a>
+                  <a class="pbmit-portfolio-btn" href=""><i class="pbmit-base-icon-bottom-right"></i></a>
                 </div>
                 <div class="pbminfotech-box-content">
                   <div class="pbminfotech-titlebox">
-                    <h3 class="pbmit-portfolio-title"><a href="single-detail-3.html">Freelancers</a></h3>
-                    <div class="pbmit-port-cat"><a href="portfolio-grid-col-3.html" rel="tag">Software</a></div>
+                    <h3 class="pbmit-portfolio-title"><a href="">V-SLAM Using in Forestry</a></h3>
+                    <div class="pbmit-port-cat"><a href="" rel="tag">Software</a></div>
                   </div>
                 </div>
-                <a class="pbmit-link" title="Software" href="single-detail-3.html"></a>
+                <a class="pbmit-link" title="Software" href=""></a>
               </div>
             </article>
+
             <article class="col-md-6 pbmit-portfolio-style-12">
               <div class="pbminfotech-post-content">
                 <div class="pbmit-image-wrapper">
                   <div class="pbmit-featured-img-wrapper">
                     <div class="pbmit-featured-wrapper">
-                      <img src="images/creative-studio/portfolio/portfolio-05.jpg" class="img-fluid" alt="" />
+                      <img src="images/creative-studio/portfolio/gushache.jpg" class="img-fluid" alt="" />
                     </div>
                   </div>
-                  <a class="pbmit-portfolio-btn" href="single-detail-4.html"><i class="pbmit-base-icon-bottom-right"></i></a>
+                  <a class="pbmit-portfolio-btn" href=""><i class="pbmit-base-icon-bottom-right"></i></a>
                 </div>
                 <div class="pbminfotech-box-content">
                   <div class="pbminfotech-titlebox">
-                    <h3 class="pbmit-portfolio-title"><a href="single-detail-4.html">Marketing</a></h3>
-                    <div class="pbmit-port-cat"><a href="portfolio-grid-col-3.html" rel="tag">Marketing</a></div>
+                    <h3 class="pbmit-portfolio-title">Multi-functional three-dimensional sand fixation vehicle</h3>
+                    <div class="pbmit-port-cat">Machinery & Equipment</div>
                   </div>
                 </div>
-                <a class="pbmit-link" title="Marketing" href="single-detail-4.html"></a>
+                <a class="pbmit-link" title="Marketing" href=""></a>
               </div>
             </article>
           </div>
+
           <div class="pbmit-svg-btn text-center ">
-            <a href="portfolio-grid-col-3.html" class="pbmit-btn pbmit-white-white-bg">
+            <a href="" class="pbmit-btn pbmit-white-white-bg">
               <span class="pbmit-header-button2-text">See All Projects</span>
             </a>
           </div>
@@ -643,444 +518,8 @@
     <!-- Portfolio End -->
 
 
-
-<!--    &lt;!&ndash; Icon heading Start &ndash;&gt;-->
-<!--    <section class="section-lgx pbmit-bg-color-blackish">-->
-<!--      <div class="container">-->
-<!--        <div class="row">-->
-<!--          <div class="col-lg-3 col-md-6">-->
-<!--            <div class="pbminfotech-ele-fid-style-5">-->
-<!--              <div class="pbmit-fld-contents">-->
-<!--                <div class="pbmit-fld-wrap">-->
-<!--                  <h4 class="pbmit-fid-inner">-->
-<!--                    <span class="pbmit-fid-before"></span>-->
-<!--                    <span class="pbmit-number-rotate numinate" data-appear-animation="animateDigits" data-from="0" data-to="25" data-interval="5" data-before="" data-before-style="" data-after="" data-after-style="">25</span>-->
-<!--                    <span class="pbmit-fid"></span>-->
-<!--                  </h4>-->
-<!--                  <h3 class="pbmit-fid-title">Year of experience</h3>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="col-lg-3 col-md-6 pt-4 pt-md-0">-->
-<!--            <div class="pbminfotech-ele-fid-style-6">-->
-<!--              <div class="pbmit-fld-contents">-->
-<!--                <div class="pbmit-fld-wrap">-->
-<!--                  <h4 class="pbmit-fid-inner">-->
-<!--                    <span class="pbmit-fid-before"></span>-->
-<!--                    <span class="pbmit-number-rotate numinate" data-appear-animation="animateDigits" data-from="0" data-to="70" data-interval="5" data-before="" data-before-style="" data-after="" data-after-style="">70</span>-->
-<!--                    <span class="pbmit-fid"></span>-->
-<!--                  </h4>-->
-<!--                  <h3 class="pbmit-fid-title">Skill Trainers</h3>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="col-lg-3 col-md-6 pt-4 pt-lg-0">-->
-<!--            <div class="pbminfotech-ele-fid-style-5">-->
-<!--              <div class="pbmit-fld-contents">-->
-<!--                <div class="pbmit-fld-wrap">-->
-<!--                  <h4 class="pbmit-fid-inner">-->
-<!--                    <span class="pbmit-fid-before"></span>-->
-<!--                    <span class="pbmit-number-rotate numinate" data-appear-animation="animateDigits" data-from="0" data-to="12" data-interval="2" data-before="" data-before-style="" data-after="" data-after-style="">12</span>-->
-<!--                    <span class="pbmit-fid"></span>-->
-<!--                  </h4>-->
-<!--                  <h3 class="pbmit-fid-title">Award Winning</h3>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="col-lg-3 col-md-6 pt-4 pt-lg-0">-->
-<!--            <div class="pbminfotech-ele-fid-style-6">-->
-<!--              <div class="pbmit-fld-contents">-->
-<!--                <div class="pbmit-fld-wrap">-->
-<!--                  <h4 class="pbmit-fid-inner">-->
-<!--                    <span class="pbmit-fid-before"></span>-->
-<!--                    <span class="pbmit-number-rotate numinate" data-appear-animation="animateDigits" data-from="0" data-to="450" data-interval="5" data-before="" data-before-style="" data-after="" data-after-style="">450</span>-->
-<!--                    <span class="pbmit-fid"></span>-->
-<!--                  </h4>-->
-<!--                  <h3 class="pbmit-fid-title">Satisfied Customers</h3>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </section>-->
-    
-    <!-- Icon heading End -->
-
-<!--    &lt;!&ndash; Testimonial Start &ndash;&gt;-->
-<!--    <section class="section-lgb creative-studio-testimonial pbmit-bg-color-blackish">-->
-<!--      <div class="container">-->
-<!--        <div class="row">-->
-<!--          <div class="col-md-6">-->
-<!--            <div class="pbmit-heading-subheading text-global animation-style2">-->
-<!--              <h4 class="pbmit-subtitle">Testimonials</h4>-->
-<!--              <h2 class="pbmit-title">What clients say us</h2>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="col-md-6">-->
-<!--            <div class="creative-studio-arrow-testimonial swiper-btn-custom d-flex flex-row-reverse"></div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="container-fluid g-xl-0">-->
-<!--        <div class="swiper-slider" data-arrows-class="creative-studio-arrow-testimonial" data-loop="true" data-autoplay="true" data-dots="false" data-arrows="true" data-columns="5" data-margin="30" data-effect="slide">-->
-<!--          <div class="swiper-wrapper">-->
-<!--            &lt;!&ndash; Slide1 &ndash;&gt;-->
-<!--            <article class="pbmit-testimonial-style-5 swiper-slide">-->
-<!--              <div class="pbminfotech-post-item">-->
-<!--                <div class="pbminfotech-box-star-ratings">-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                </div>-->
-<!--                <div class="pbminfotech-box-desc">-->
-<!--                  <blockquote class="pbminfotech-testimonial-text">-->
-<!--                    <p>“Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur.”</p>-->
-<!--                  </blockquote>-->
-<!--                </div>-->
-<!--                <div class="pbminfotech-box-author d-flex align-items-center">-->
-<!--                  <div class="pbminfotech-box-img">-->
-<!--                    <div class="pbmit-featured-img-wrapper">-->
-<!--                      <div class="pbmit-featured-wrapper">-->
-<!--                        <img src="images/testimonial/testimonial-01.jpg" class="img-fluid" alt="" />-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                  <div class="pbmit-auther-content">-->
-<!--                    <h3 class="pbminfotech-box-title">Jordan Peele</h3>-->
-<!--                    <div class="pbminfotech-testimonial-detail">Manager</div>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </article>-->
-<!--            &lt;!&ndash; Slide2 &ndash;&gt;-->
-<!--            <article class="pbmit-testimonial-style-5 swiper-slide">-->
-<!--              <div class="pbminfotech-post-item">-->
-<!--                <div class="pbminfotech-box-star-ratings">-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                </div>-->
-<!--                <div class="pbminfotech-box-desc">-->
-<!--                  <blockquote class="pbminfotech-testimonial-text">-->
-<!--                    <p>“Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore dolore magna aliqua voluptatem.”</p>-->
-<!--                  </blockquote>-->
-<!--                </div>-->
-<!--                <div class="pbminfotech-box-author d-flex align-items-center">-->
-<!--                  <div class="pbminfotech-box-img">-->
-<!--                    <div class="pbmit-featured-img-wrapper">-->
-<!--                      <div class="pbmit-featured-wrapper">-->
-<!--                        <img src="images/testimonial/testimonial-02.jpg" class="img-fluid" alt="" />-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                  <div class="pbmit-auther-content">-->
-<!--                    <h3 class="pbminfotech-box-title">Paula Deen</h3>-->
-<!--                    <div class="pbminfotech-testimonial-detail">Seo</div>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </article>-->
-<!--            &lt;!&ndash; Slide3 &ndash;&gt;-->
-<!--            <article class="pbmit-testimonial-style-5 swiper-slide">-->
-<!--              <div class="pbminfotech-post-item">-->
-<!--                <div class="pbminfotech-box-star-ratings">-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                </div>-->
-<!--                <div class="pbminfotech-box-desc">-->
-<!--                  <blockquote class="pbminfotech-testimonial-text">-->
-<!--                    <p>“I would like to express my thanks & appreciation to you for understanding the subject matter and for your excellent writing Good job and well done I look forward to working with you in our next”</p>-->
-<!--                  </blockquote>-->
-<!--                </div>-->
-<!--                <div class="pbminfotech-box-author d-flex align-items-center">-->
-<!--                  <div class="pbminfotech-box-img">-->
-<!--                    <div class="pbmit-featured-img-wrapper">-->
-<!--                      <div class="pbmit-featured-wrapper">-->
-<!--                        <img src="images/testimonial/testimonial-03.jpg" class="img-fluid" alt="" />-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                  <div class="pbmit-auther-content">-->
-<!--                    <h3 class="pbminfotech-box-title">Gordon Ramsay</h3>-->
-<!--                    <div class="pbminfotech-testimonial-detail">Architech</div>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </article>-->
-<!--            &lt;!&ndash; Slide4 &ndash;&gt;-->
-<!--            <article class="pbmit-testimonial-style-5 swiper-slide">-->
-<!--              <div class="pbminfotech-post-item">-->
-<!--                <div class="pbminfotech-box-star-ratings">-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                </div>-->
-<!--                <div class="pbminfotech-box-desc">-->
-<!--                  <blockquote class="pbminfotech-testimonial-text">-->
-<!--                    <p>“I would like to express my thanks & appreciation to you for understanding the subject matter and for your excellent writing Good job and well done”</p>-->
-<!--                  </blockquote>-->
-<!--                </div>-->
-<!--                <div class="pbminfotech-box-author d-flex align-items-center">-->
-<!--                  <div class="pbminfotech-box-img">-->
-<!--                    <div class="pbmit-featured-img-wrapper">-->
-<!--                      <div class="pbmit-featured-wrapper">-->
-<!--                        <img src="images/testimonial/testimonial-04.jpg" class="img-fluid" alt="" />-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                  <div class="pbmit-auther-content">-->
-<!--                    <h3 class="pbminfotech-box-title">Carla Hall</h3>-->
-<!--                    <div class="pbminfotech-testimonial-detail">Designer</div>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </article>-->
-<!--            &lt;!&ndash; Slide5 &ndash;&gt;-->
-<!--            <article class="pbmit-testimonial-style-5 swiper-slide">-->
-<!--              <div class="pbminfotech-post-item">-->
-<!--                <div class="pbminfotech-box-star-ratings">-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                </div>-->
-<!--                <div class="pbminfotech-box-desc">-->
-<!--                  <blockquote class="pbminfotech-testimonial-text">-->
-<!--                    <p>“I would like to express my thanks & appreciation to you for understanding the subject matter and for your excellent writing Good job and well done”</p>-->
-<!--                  </blockquote>-->
-<!--                </div>-->
-<!--                <div class="pbminfotech-box-author d-flex align-items-center">-->
-<!--                  <div class="pbminfotech-box-img">-->
-<!--                    <div class="pbmit-featured-img-wrapper">-->
-<!--                      <div class="pbmit-featured-wrapper">-->
-<!--                        <img src="images/testimonial/testimonial-05.jpg" class="img-fluid" alt="" />-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                  <div class="pbmit-auther-content">-->
-<!--                    <h3 class="pbminfotech-box-title">Bobby Flay</h3>-->
-<!--                    <div class="pbminfotech-testimonial-detail">Architech</div>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </article>-->
-<!--            &lt;!&ndash; Slide6 &ndash;&gt;-->
-<!--            <article class="pbmit-testimonial-style-5 swiper-slide">-->
-<!--              <div class="pbminfotech-post-item">-->
-<!--                <div class="pbminfotech-box-star-ratings">-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                  <i class="pbmit-base-icon-pointed-star pbmit-active"></i>-->
-<!--                </div>-->
-<!--                <div class="pbminfotech-box-desc">-->
-<!--                  <blockquote class="pbminfotech-testimonial-text">-->
-<!--                    <p>“I would like to express my thanks & appreciation to you for understanding the subject matter and for your excellent writing Good job and well done I look forward to working with you in our next”</p>-->
-<!--                  </blockquote>-->
-<!--                </div>-->
-<!--                <div class="pbminfotech-box-author d-flex align-items-center">-->
-<!--                  <div class="pbminfotech-box-img">-->
-<!--                    <div class="pbmit-featured-img-wrapper">-->
-<!--                      <div class="pbmit-featured-wrapper">-->
-<!--                        <img src="images/testimonial/testimonial-06.jpg" class="img-fluid" alt="" />-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                  <div class="pbmit-auther-content">-->
-<!--                    <h3 class="pbminfotech-box-title">Jamie Oliver</h3>-->
-<!--                    <div class="pbminfotech-testimonial-detail">Architech</div>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </article>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </section>-->
-<!--    &lt;!&ndash; Testimonial End &ndash;&gt;-->
-
-<!--    &lt;!&ndash; Client Start &ndash;&gt;-->
-<!--    <section class="creative-studio-client section-lgb">-->
-<!--      <div class="container">-->
-<!--        <div class="row justify-content-center">-->
-<!--          <div class="col-md-12">-->
-<!--            <div class="digital-studio-text"><span class="pbmit-globalcolor">150+ most trusted companies globally</span></div>-->
-<!--          </div>-->
-<!--          <div class="col-md pbmit-column-inner mt-md-0 mt-4">-->
-<!--            <article class="pbmit-client-style-3">-->
-<!--              <div class="pbmit-border-wrapper text-center">-->
-<!--                <div class="pbmit-client-wrapper pbmit-client-with-hover-img">-->
-<!--                  <h4 class="pbmit-hide">Client 1</h4>-->
-<!--                  <div class="pbmit-client-hover-img">-->
-<!--                    <img src="images/client-logo/global/cleint-01-global.png" alt="" />-->
-<!--                  </div>-->
-<!--                  <div class="pbmit-featured-img-wrapper">-->
-<!--                    <div class="pbmit-featured-wrapper">-->
-<!--                      <img src="images/client-logo/Gray/cleint-01-gray.png" class="" alt="" />-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </article>-->
-<!--          </div>-->
-<!--          <div class="col-md pbmit-column-inner mt-md-0 mt-4">-->
-<!--            <article class="pbmit-client-style-3">-->
-<!--              <div class="pbmit-border-wrapper text-center">-->
-<!--                <div class="pbmit-client-wrapper pbmit-client-with-hover-img">-->
-<!--                  <h4 class="pbmit-hide">Client 2</h4>-->
-<!--                  <div class="pbmit-client-hover-img">-->
-<!--                    <img src="images/client-logo/global/cleint-02-global.png" alt="" />-->
-<!--                  </div>-->
-<!--                  <div class="pbmit-featured-img-wrapper">-->
-<!--                    <div class="pbmit-featured-wrapper">-->
-<!--                      <img src="images/client-logo/Gray/cleint-02-gray.png" class="" alt="" />-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </article>-->
-<!--          </div>-->
-<!--          <div class="col-md pbmit-column-inner mt-md-0 mt-4">-->
-<!--            <article class="pbmit-client-style-3">-->
-<!--              <div class="pbmit-border-wrapper text-center">-->
-<!--                <div class="pbmit-client-wrapper pbmit-client-with-hover-img">-->
-<!--                  <h4 class="pbmit-hide">Client 3</h4>-->
-<!--                  <div class="pbmit-client-hover-img">-->
-<!--                    <img src="images/client-logo/global/cleint-03-global.png" alt="" />-->
-<!--                  </div>-->
-<!--                  <div class="pbmit-featured-img-wrapper">-->
-<!--                    <div class="pbmit-featured-wrapper">-->
-<!--                      <img src="images/client-logo/Gray/cleint-03-gray.png" class="" alt="" />-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </article>-->
-<!--          </div>-->
-<!--          <div class="col-md pbmit-column-inner mt-md-0 mt-4">-->
-<!--            <article class="pbmit-client-style-3">-->
-<!--              <div class="pbmit-border-wrapper text-center">-->
-<!--                <div class="pbmit-client-wrapper pbmit-client-with-hover-img">-->
-<!--                  <h4 class="pbmit-hide">Client 4</h4>-->
-<!--                  <div class="pbmit-client-hover-img">-->
-<!--                    <img src="images/client-logo/global/cleint-04-global.png" alt="" />-->
-<!--                  </div>-->
-<!--                  <div class="pbmit-featured-img-wrapper">-->
-<!--                    <div class="pbmit-featured-wrapper">-->
-<!--                      <img src="images/client-logo/Gray/cleint-04-gray.png" class="" alt="" />-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </article>-->
-<!--          </div>-->
-<!--          <div class="col-md pbmit-column-inner mt-md-0 mt-4">-->
-<!--            <article class="pbmit-client-style-3">-->
-<!--              <div class="pbmit-border-wrapper text-center">-->
-<!--                <div class="pbmit-client-wrapper pbmit-client-with-hover-img">-->
-<!--                  <h4 class="pbmit-hide">Client 5</h4>-->
-<!--                  <div class="pbmit-client-hover-img">-->
-<!--                    <img src="images/client-logo/global/cleint-05-global.png" alt="" />-->
-<!--                  </div>-->
-<!--                  <div class="pbmit-featured-img-wrapper">-->
-<!--                    <div class="pbmit-featured-wrapper">-->
-<!--                      <img src="images/client-logo/Gray/cleint-05-gray.png" class="" alt="" />-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </article>-->
-<!--          </div>-->
-<!--          <div class="col-md pbmit-column-inner mt-4">-->
-<!--            <article class="pbmit-client-style-3">-->
-<!--              <div class="pbmit-border-wrapper text-center">-->
-<!--                <div class="pbmit-client-wrapper pbmit-client-with-hover-img">-->
-<!--                  <h4 class="pbmit-hide">Client 6</h4>-->
-<!--                  <div class="pbmit-client-hover-img">-->
-<!--                    <img src="images/client-logo/global/cleint-06-global.png" alt="" />-->
-<!--                  </div>-->
-<!--                  <div class="pbmit-featured-img-wrapper">-->
-<!--                    <div class="pbmit-featured-wrapper">-->
-<!--                      <img src="images/client-logo/Gray/cleint-06-gray.png" class="" alt="" />-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </article>-->
-<!--          </div>-->
-<!--          <div class="col-md pbmit-column-inner mt-4">-->
-<!--            <article class="pbmit-client-style-3">-->
-<!--              <div class="pbmit-border-wrapper text-center">-->
-<!--                <div class="pbmit-client-wrapper pbmit-client-with-hover-img">-->
-<!--                  <h4 class="pbmit-hide">Client 7</h4>-->
-<!--                  <div class="pbmit-client-hover-img">-->
-<!--                    <img src="images/client-logo/global/cleint-07-global.png" alt="" />-->
-<!--                  </div>-->
-<!--                  <div class="pbmit-featured-img-wrapper">-->
-<!--                    <div class="pbmit-featured-wrapper">-->
-<!--                      <img src="images/client-logo/Gray/cleint-07-gray.png" class="" alt="" />-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </article>-->
-<!--          </div>-->
-<!--          <div class="col-md pbmit-column-inner mt-4">-->
-<!--            <article class="pbmit-client-style-3">-->
-<!--              <div class="pbmit-border-wrapper text-center">-->
-<!--                <div class="pbmit-client-wrapper pbmit-client-with-hover-img">-->
-<!--                  <h4 class="pbmit-hide">Client 8</h4>-->
-<!--                  <div class="pbmit-client-hover-img">-->
-<!--                    <img src="images/client-logo/global/cleint-08-global.png" alt="" />-->
-<!--                  </div>-->
-<!--                  <div class="pbmit-featured-img-wrapper">-->
-<!--                    <div class="pbmit-featured-wrapper">-->
-<!--                      <img src="images/client-logo/Gray/cleint-08-gray.png" class="" alt="" />-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </article>-->
-<!--          </div>-->
-<!--          <div class="col-md pbmit-column-inner mt-4">-->
-<!--            <article class="pbmit-client-style-3">-->
-<!--              <div class="pbmit-border-wrapper text-center">-->
-<!--                <div class="pbmit-client-wrapper pbmit-client-with-hover-img">-->
-<!--                  <h4 class="pbmit-hide">Client 9</h4>-->
-<!--                  <div class="pbmit-client-hover-img">-->
-<!--                    <img src="images/client-logo/global/cleint-09-global.png" alt="" />-->
-<!--                  </div>-->
-<!--                  <div class="pbmit-featured-img-wrapper">-->
-<!--                    <div class="pbmit-featured-wrapper">-->
-<!--                      <img src="images/client-logo/Gray/cleint-09-gray.png" class="" alt="" />-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </article>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </section>-->
-<!--    &lt;!&ndash; Client End &ndash;&gt;-->
-
     <!-- team Start -->
-    <section class="section-lgb digital-studio-team">
+    <section class="section-lgb digital-studio-team" id="people">
       <div class="container">
         <div class="row g-0">
           <!-- Left Column: Title and Description -->
@@ -1092,19 +531,21 @@
                 <!--                <div class="pbmit-heading-desc text-white">Lorem ipsum dolor consectetur adipiscing elit Imperdiet arcu tellus ultricies sem at diam justo rhoncus lacinia lacus porta.</div>-->
               </div>
               <div class="pbmit-spinner pbmit-spinner-box-style-6">
-                <a class="pbmit-lightbox-video" href="team-single-detail.html">
+                <a href="#teamDetail" data-modal-content="teamDetail">
                   <div class="pbmit-ihbox-box">
                     <div class="pbmit-ihbox-icon">
                       <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
                         <i class="pbmit-digiwize-icon pbmit-digiwize-icon-up-right"></i>
                       </div>
                     </div>
-                    <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 200 200">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 200 200">
+
+                    <!--                    <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 200 200">-->
                       <defs>
                         <path d="M0, 100a100, 100 0 1, 0 200, 0a100, 100 0 1, 0 -200, 0" id="txt-path1"></path>
                       </defs>
                       <text>
-                        <textPath startOffset="0" xlink:href="#txt-path1">Join Our Team  *  Release Your Potential * Find your Limit</textPath>
+                        <textPath startOffset="0" xlink:href="#txt-path1">* Join Our Labortory * Realize Your Imaginations   </textPath>
                       </text>
                     </svg>
                   </div>
@@ -1128,9 +569,10 @@
                     </div>
                     <div class="pbminfotech-box-content">
                       <div class="pbminfotech-box-team-position">Team Leader &amp; Professor</div>
-                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Dr. Jiangming Kan</a></h3>
+                      <h3 class="pbmit-team-title"><a href="#Kanjiangming" data-modal-content="Kanjiangming">Dr. Jiangming Kan</a></h3>
                     </div>
-                    <a href="team-single-detail.html" class="pbmit-link"></a>
+                      <a href="#Kanjiangming" data-modal-content="Kanjiangming" class="pbmit-link"></a>
+<!--                    <h3 class="pbmit-service-title"><a href="#RI_ForestryEng" data-modal-content="RI_ForestryEng">Forest engineering equipment and its automation</a></h3>-->
                   </div>
                 </article>
               </div>
@@ -1145,9 +587,9 @@
                     </div>
                     <div class="pbminfotech-box-content">
                       <div class="pbminfotech-box-team-position">Associate Professor</div>
-                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Dr. Ruifang Dong</a></h3>
+                      <h3 class="pbmit-team-title"><a href="#" data-modal-content="dongruifang">Dr. Ruifang Dong</a></h3>
                     </div>
-                    <a href="team-single-detail.html" class="pbmit-link"></a>
+                    <a href="#" data-modal-content="dongruifang" class="pbmit-link"></a>
                   </div>
                 </article>
               </div>
@@ -1162,9 +604,9 @@
                     </div>
                     <div class="pbminfotech-box-content">
                       <div class="pbminfotech-box-team-position">Lecturer</div>
-                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Dr. Xixuan Zhao</a></h3>
+                      <h3 class="pbmit-team-title"><a href="#zhaoxixuan" data-modal-content="zhaoxixuan">Dr. Xixuan Zhao</a></h3>
                     </div>
-                    <a href="team-single-detail.html" class="pbmit-link"></a>
+                    <a href="#zhaoxixuan" data-modal-content="zhaoxixuan" class="pbmit-link"></a>
                   </div>
                 </article>
               </div>
@@ -1179,9 +621,9 @@
                     </div>
                     <div class="pbminfotech-box-content">
                       <div class="pbminfotech-box-team-position">Lecturer</div>
-                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Dr. Shun Yao</a></h3>
+                      <h3 class="pbmit-team-title"><a href="#Kanjiangming" data-modal-content="Kanjiangming">Dr. Shun Yao</a></h3>
                     </div>
-                    <a href="team-single-detail.html" class="pbmit-link"></a>
+                    <a href="#Kanjiangming" data-modal-content="Kanjiangming" class="pbmit-link"></a>
                   </div>
                 </article>
               </div>
@@ -1198,9 +640,9 @@
                     </div>
                     <div class="pbminfotech-box-content">
                       <div class="pbminfotech-box-team-position">PhD Candidate</div>
-                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Junyu Han</a></h3>
+                      <h3 class="pbmit-team-title"><a href="#Kanjiangming" data-modal-content="Kanjiangming">Junyu Han</a></h3>
                     </div>
-                    <a href="team-single-detail.html" class="pbmit-link"></a>
+                    <a href="#Kanjiangming" data-modal-content="Kanjiangming" class="pbmit-link"></a>
                   </div>
                 </article>
               </div>
@@ -1215,9 +657,9 @@
                     </div>
                     <div class="pbminfotech-box-content">
                       <div class="pbminfotech-box-team-position">PhD Candidate</div>
-                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Tianyu Han</a></h3>
+                      <h3 class="pbmit-team-title"><a href="#Kanjiangming" data-modal-content="Kanjiangming">Tianyu Han</a></h3>
                     </div>
-                    <a href="team-single-detail.html" class="pbmit-link"></a>
+                    <a href="#Kanjiangming" data-modal-content="Kanjiangming" class="pbmit-link"></a>
                   </div>
                 </article>
               </div>
@@ -1232,9 +674,9 @@
                     </div>
                     <div class="pbminfotech-box-content">
                       <div class="pbminfotech-box-team-position">PhD Candidate</div>
-                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Yunhe (Zia) Zhou</a></h3>
+                      <h3 class="pbmit-team-title"><a href="#Kanjiangming" data-modal-content="Kanjiangming">Yunhe Zhou</a></h3>
                     </div>
-                    <a href="team-single-detail.html" class="pbmit-link"></a>
+                    <a href="#Kanjiangming" data-modal-content="Kanjiangming" class="pbmit-link"></a>
                   </div>
                 </article>
               </div>
@@ -1248,9 +690,9 @@
                     </div>
                     <div class="pbminfotech-box-content">
                       <div class="pbminfotech-box-team-position">PhD Candidate</div>
-                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Yuanhang Liu</a></h3>
+                      <h3 class="pbmit-team-title"><a href="#Kanjiangming" data-modal-content="Kanjiangming">Yuanhang Liu</a></h3>
                     </div>
-                    <a href="team-single-detail.html" class="pbmit-link"></a>
+                    <a href="#Kanjiangming" data-modal-content="Kanjiangming" class="pbmit-link"></a>
                   </div>
                 </article>
               </div>
@@ -1265,9 +707,10 @@
                     </div>
                     <div class="pbminfotech-box-content">
                       <div class="pbminfotech-box-team-position">Graduate</div>
-                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Jiaming Zhang</a></h3>
+                      <h3 class="pbmit-team-title"><a href="#Zhangjiaming" data-modal-content="Zhangjiaming">Jiaming Zhang</a></h3>
                     </div>
-                    <a href="https://charmingzh.github.io/#About%20me" class="pbmit-link"></a>
+<!--                    <a href="https://charmingzh.github.io/#About%20me" class="pbmit-link"></a>-->
+                    <a href="#Zhangjiaming" data-modal-content="Zhangjiaming" class="pbmit-link"></a>
                   </div>
                 </article>
               </div>
@@ -1282,9 +725,9 @@
                     </div>
                     <div class="pbminfotech-box-content">
                       <div class="pbminfotech-box-team-position">Graduate</div>
-                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Pengyu Zhang</a></h3>
+                      <h3 class="pbmit-team-title"><a href="#Kanjiangming" data-modal-content="Kanjiangming">Pengyu Zhang</a></h3>
                     </div>
-                    <a href="team-single-detail.html" class="pbmit-link"></a>
+                    <a href="#Kanjiangming" data-modal-content="Kanjiangming" class="pbmit-link"></a>
                   </div>
                 </article>
               </div>
@@ -1298,9 +741,9 @@
                     </div>
                     <div class="pbminfotech-box-content">
                       <div class="pbminfotech-box-team-position">Graduate</div>
-                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Shuyao Chai</a></h3>
+                      <h3 class="pbmit-team-title"><a href="#Kanjiangming" data-modal-content="Kanjiangming">Shuyao Chai</a></h3>
                     </div>
-                    <a href="team-single-detail.html" class="pbmit-link"></a>
+                    <a href="#Kanjiangming" data-modal-content="Kanjiangming" class="pbmit-link"></a>
                   </div>
                 </article>
               </div>
@@ -1315,9 +758,9 @@
                     </div>
                     <div class="pbminfotech-box-content">
                       <div class="pbminfotech-box-team-position">Graduate</div>
-                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Zheng Sun</a></h3>
+                      <h3 class="pbmit-team-title"><a href="#Kanjiangming" data-modal-content="Kanjiangming">Zheng Sun</a></h3>
                     </div>
-                    <a href="team-single-detail.html" class="pbmit-link"></a>
+                    <a href="#Kanjiangming" data-modal-content="Kanjiangming" class="pbmit-link"></a>
                   </div>
                 </article>
               </div>
@@ -1332,9 +775,9 @@
                     </div>
                     <div class="pbminfotech-box-content">
                       <div class="pbminfotech-box-team-position">Graduate</div>
-                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Junshuai Wang</a></h3>
+                      <h3 class="pbmit-team-title"><a href="#Kanjiangming" data-modal-content="Kanjiangming">Junshuai Wang</a></h3>
                     </div>
-                    <a href="team-single-detail.html" class="pbmit-link"></a>
+                    <a href="#Kanjiangming" data-modal-content="Kanjiangming" class="pbmit-link"></a>
                   </div>
                 </article>
               </div>
@@ -1349,9 +792,9 @@
                     </div>
                     <div class="pbminfotech-box-content">
                       <div class="pbminfotech-box-team-position">Graduate</div>
-                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Yuan Li</a></h3>
+                      <h3 class="pbmit-team-title"><a href="#Kanjiangming" data-modal-content="Kanjiangming">Yuan Li</a></h3>
                     </div>
-                    <a href="team-single-detail.html" class="pbmit-link"></a>
+                    <a href="#Kanjiangming" data-modal-content="Kanjiangming" class="pbmit-link"></a>
                   </div>
                 </article>
               </div>
@@ -1366,9 +809,9 @@
                     </div>
                     <div class="pbminfotech-box-content">
                       <div class="pbminfotech-box-team-position">Graduate</div>
-                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Kuan Wang</a></h3>
+                      <h3 class="pbmit-team-title"><a href="#Kanjiangming" data-modal-content="Kanjiangming">Kuan Wang</a></h3>
                     </div>
-                    <a href="team-single-detail.html" class="pbmit-link"></a>
+                    <a href="#Kanjiangming" data-modal-content="Kanjiangming" class="pbmit-link"></a>
                   </div>
                 </article>
               </div>
@@ -1383,9 +826,9 @@
                     </div>
                     <div class="pbminfotech-box-content">
                       <div class="pbminfotech-box-team-position">Graduate</div>
-                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Shuo Yang</a></h3>
+                      <h3 class="pbmit-team-title"><a href="#Kanjiangming" data-modal-content="Kanjiangming">Shuo Yang</a></h3>
                     </div>
-                    <a href="team-single-detail.html" class="pbmit-link"></a>
+                    <a href="#Kanjiangming" data-modal-content="Kanjiangming" class="pbmit-link"></a>
                   </div>
                 </article>
               </div>
@@ -1417,9 +860,9 @@
                     </div>
                     <div class="pbminfotech-box-content">
                       <div class="pbminfotech-box-team-position">Graduate</div>
-                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Nianci Ling</a></h3>
+                      <h3 class="pbmit-team-title"><a href="#Kanjiangming" data-modal-content="Kanjiangming">Nianci Ling</a></h3>
                     </div>
-                    <a href="team-single-detail.html" class="pbmit-link"></a>
+                    <a href="#Kanjiangming" data-modal-content="Kanjiangming" class="pbmit-link"></a>
                   </div>
                 </article>
               </div>
@@ -1434,9 +877,9 @@
                     </div>
                     <div class="pbminfotech-box-content">
                       <div class="pbminfotech-box-team-position">Graduate</div>
-                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Zihui Jin</a></h3>
+                      <h3 class="pbmit-team-title"><a href="#Kanjiangming" data-modal-content="Kanjiangming">Zihui Jin</a></h3>
                     </div>
-                    <a href="team-single-detail.html" class="pbmit-link"></a>
+                    <a href="#Kanjiangming" data-modal-content="Kanjiangming" class="pbmit-link"></a>
                   </div>
                 </article>
               </div>
@@ -1451,9 +894,9 @@
                     </div>
                     <div class="pbminfotech-box-content">
                       <div class="pbminfotech-box-team-position">Graduate</div>
-                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Xiangyu Jing</a></h3>
+                      <h3 class="pbmit-team-title"><a href="#Kanjiangming" data-modal-content="Kanjiangming">Xiangyu Jing</a></h3>
                     </div>
-                    <a href="team-single-detail.html" class="pbmit-link"></a>
+                    <a href="#Kanjiangming" data-modal-content="Kanjiangming" class="pbmit-link"></a>
                   </div>
                 </article>
               </div>
@@ -1468,9 +911,9 @@
                     </div>
                     <div class="pbminfotech-box-content">
                       <div class="pbminfotech-box-team-position">Graduate</div>
-                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Yunchang Liu</a></h3>
+                      <h3 class="pbmit-team-title"><a href="#Kanjiangming" data-modal-content="Kanjiangming">Yunchang Liu</a></h3>
                     </div>
-                    <a href="team-single-detail.html" class="pbmit-link"></a>
+                    <a href="#Kanjiangming" data-modal-content="Kanjiangming" class="pbmit-link"></a>
                   </div>
                 </article>
               </div>
@@ -1485,9 +928,9 @@
                     </div>
                     <div class="pbminfotech-box-content">
                       <div class="pbminfotech-box-team-position">Graduate</div>
-                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Jiawei Hao</a></h3>
+                      <h3 class="pbmit-team-title"><a href="#Kanjiangming" data-modal-content="Kanjiangming">Jiawei Hao</a></h3>
                     </div>
-                    <a href="team-single-detail.html" class="pbmit-link"></a>
+                    <a href="#Kanjiangming" data-modal-content="Kanjiangming" class="pbmit-link"></a>
                   </div>
                 </article>
               </div>
@@ -1502,9 +945,9 @@
                     </div>
                     <div class="pbminfotech-box-content">
                       <div class="pbminfotech-box-team-position">Graduate</div>
-                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Yue Wu</a></h3>
+                      <h3 class="pbmit-team-title"><a href="#Kanjiangming" data-modal-content="Kanjiangming">Yue Wu</a></h3>
                     </div>
-                    <a href="team-single-detail.html" class="pbmit-link"></a>
+                    <a href="#Kanjiangming" data-modal-content="Kanjiangming" class="pbmit-link"></a>
                   </div>
                 </article>
               </div>
@@ -1519,9 +962,9 @@
                     </div>
                     <div class="pbminfotech-box-content">
                       <div class="pbminfotech-box-team-position">Graduate</div>
-                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Xi Cheng</a></h3>
+                      <h3 class="pbmit-team-title"><a href="#Kanjiangming" data-modal-content="Kanjiangming">Xi Cheng</a></h3>
                     </div>
-                    <a href="team-single-detail.html" class="pbmit-link"></a>
+                    <a href="#Kanjiangming" data-modal-content="Kanjiangming" class="pbmit-link"></a>
                   </div>
                 </article>
               </div>
@@ -1536,9 +979,9 @@
                     </div>
                     <div class="pbminfotech-box-content">
                       <div class="pbminfotech-box-team-position">Graduate</div>
-                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Yulong Chen</a></h3>
+                      <h3 class="pbmit-team-title"><a href="#Kanjiangming" data-modal-content="Kanjiangming">Yulong Chen</a></h3>
                     </div>
-                    <a href="team-single-detail.html" class="pbmit-link"></a>
+                    <a href="#Kanjiangming" data-modal-content="Kanjiangming" class="pbmit-link"></a>
                   </div>
                 </article>
               </div>
@@ -1553,9 +996,9 @@
                     </div>
                     <div class="pbminfotech-box-content">
                       <div class="pbminfotech-box-team-position">Undergraduate</div>
-                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Hanyan Liang</a></h3>
+                      <h3 class="pbmit-team-title"><a href="#Kanjiangming" data-modal-content="Kanjiangming">Hanyan Liang</a></h3>
                     </div>
-                    <a href="team-single-detail.html" class="pbmit-link"></a>
+                    <a href="#Kanjiangming" data-modal-content="Kanjiangming" class="pbmit-link"></a>
                   </div>
                 </article>
               </div>
@@ -1567,247 +1010,25 @@
       </div>
     </section>
 
-
-<!--    &lt;!&ndash; team Start &ndash;&gt;-->
-<!--    <section class="section-lgb digital-studio-team">-->
-<!--      <div class="container">-->
-<!--        <div class="row g-0">-->
-<!--          <div class="col-md-6 pbmit-col-left">-->
-<!--            <div class="pbmit-sticky">-->
-<!--              <div class="pbmit-heading-subheading text-global animation-style2">-->
-<!--                <h4 class="pbmit-subtitle">Our Team</h4>-->
-<!--                <h2 class="pbmit-title">Say hi to our <br><span class="pbmit-globalcolor">AMAZING </span> team</h2>-->
-<!--&lt;!&ndash;                <div class="pbmit-heading-desc text-white">Lorem ipsum dolor consectetur adipiscing elit Imperdiet arcu tellus ultricies sem at diam justo rhoncus lacinia lacus porta.</div>&ndash;&gt;-->
-<!--              </div>-->
-<!--              <div class="pbmit-spinner pbmit-spinner-box-style-6">-->
-<!--                <a class="pbmit-lightbox-video" href="https://www.youtube-nocookie.com/embed/SZEflIVnhH8">-->
-<!--                  <div class="pbmit-ihbox-box">-->
-<!--                    <div class="pbmit-ihbox-icon">-->
-<!--                      <div class="pbmit-icon-wrapper pbmit-icon-type-icon">-->
-<!--                        <i class="pbmit-digiwize-icon pbmit-digiwize-icon-up-right"></i>-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                    <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 200 200">-->
-<!--                      <defs>-->
-<!--                        <path d="M0, 100a100, 100 0 1, 0 200, 0a100, 100 0 1, 0 -200, 0" id="txt-path1"></path>-->
-<!--                      </defs>-->
-<!--                      <text>-->
-<!--                        <textPath startOffset="0" xlink:href="#txt-path1">Meet Our Expert Team  *  Meet Our Expert Team  *</textPath>-->
-<!--                      </text>-->
-<!--                    </svg>-->
-<!--                  </div>-->
-<!--                </a>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="col-md-6">-->
-<!--            <div class="row g-0">-->
-<!--              <div class="col-md-6">-->
-<!--                <article class="pbmit-team-style-3">-->
-<!--                  <div class="pbminfotech-post-item">-->
-<!--                    <div class="pbmit-featured-img-wrapper">-->
-<!--                      <div class="pbmit-featured-wrapper">-->
-<!--                        <img src="images/creative-studio/team/team-white-01.jpg" class="img-fluid" alt="" />-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                    <div class="pbminfotech-box-content">-->
-<!--                      <div class="pbminfotech-box-team-position">Founder &amp; CEO</div>-->
-<!--                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Dennis Barrett</a></h3>-->
-<!--                    </div>-->
-<!--                    <a href="team-single-detail.html" class="pbmit-link"></a>-->
-<!--                  </div>-->
-<!--                </article>-->
-<!--              </div>-->
-<!--              <div class="col-md-6">-->
-<!--                <article class="pbmit-team-style-3">-->
-<!--                  <div class="pbminfotech-post-item">-->
-<!--                    <div class="pbmit-featured-img-wrapper">-->
-<!--                      <div class="pbmit-featured-wrapper">-->
-<!--                        <img src="images/creative-studio/team/team-white-02.jpg" class="img-fluid" alt="" />-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                    <div class="pbminfotech-box-content">-->
-<!--                      <div class="pbminfotech-box-team-position">Creative Director</div>-->
-<!--                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Bryan Knight</a></h3>-->
-<!--                    </div>-->
-<!--                    <a href="team-single-detail.html" class="pbmit-link"></a>-->
-<!--                  </div>-->
-<!--                </article>-->
-<!--              </div>-->
-<!--              <div class="col-md-6">-->
-<!--                <article class="pbmit-team-style-3">-->
-<!--                  <div class="pbminfotech-post-item">-->
-<!--                    <div class="pbmit-featured-img-wrapper">-->
-<!--                      <div class="pbmit-featured-wrapper">-->
-<!--                        <img src="images/creative-studio/team/team-white-03.jpg" class="img-fluid" alt="" />-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                    <div class="pbminfotech-box-content">-->
-<!--                      <div class="pbminfotech-box-team-position">Office Head Dep</div>-->
-<!--                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Judy Nguyen</a></h3>-->
-<!--                    </div>-->
-<!--                    <a href="team-single-detail.html" class="pbmit-link"></a>-->
-<!--                  </div>-->
-<!--                </article>-->
-<!--              </div>-->
-<!--              <div class="col-md-6">-->
-<!--                <article class="pbmit-team-style-3">-->
-<!--                  <div class="pbminfotech-post-item">-->
-<!--                    <div class="pbmit-featured-img-wrapper">-->
-<!--                      <div class="pbmit-featured-wrapper">-->
-<!--                        <img src="images/creative-studio/team/team-white-04.jpg" class="img-fluid" alt="" />-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                    <div class="pbminfotech-box-content">-->
-<!--                      <div class="pbminfotech-box-team-position">Fronted Desiner</div>-->
-<!--                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Dennis Barrett</a></h3>-->
-<!--                    </div>-->
-<!--                    <a href="team-single-detail.html" class="pbmit-link"></a>-->
-<!--                  </div>-->
-<!--                </article>-->
-<!--              </div>-->
-<!--              <div class="col-md-6">-->
-<!--                <article class="pbmit-team-style-3">-->
-<!--                  <div class="pbminfotech-post-item">-->
-<!--                    <div class="pbmit-featured-img-wrapper">-->
-<!--                      <div class="pbmit-featured-wrapper">-->
-<!--                        <img src="images/creative-studio/team/team-white-05.jpg" class="img-fluid" alt="" />-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                    <div class="pbminfotech-box-content">-->
-<!--                      <div class="pbminfotech-box-team-position">Management</div>-->
-<!--                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">John Martin</a></h3>-->
-<!--                    </div>-->
-<!--                    <a href="team-single-detail.html" class="pbmit-link"></a>-->
-<!--                  </div>-->
-<!--                </article>-->
-<!--              </div>-->
-<!--              <div class="col-md-6">-->
-<!--                <article class="pbmit-team-style-3">-->
-<!--                  <div class="pbminfotech-post-item">-->
-<!--                    <div class="pbmit-featured-img-wrapper">-->
-<!--                      <div class="pbmit-featured-wrapper">-->
-<!--                        <img src="images/creative-studio/team/team-white-06.jpg" class="img-fluid" alt="" />-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                    <div class="pbminfotech-box-content">-->
-<!--                      <div class="pbminfotech-box-team-position">Accountant</div>-->
-<!--                      <h3 class="pbmit-team-title"><a href="team-single-detail.html">Esida Martin</a></h3>-->
-<!--                    </div>-->
-<!--                    <a href="team-single-detail.html" class="pbmit-link"></a>-->
-<!--                  </div>-->
-<!--                </article>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </section>-->
-<!--    &lt;!&ndash; team End &ndash;&gt;-->
-
-<!--    &lt;!&ndash; Blog Start &ndash;&gt;-->
-<!--    <section class="section-lgb">-->
-<!--      <div class="container">-->
-<!--        <div class="pbmit-heading-subheading text-global animation-style2">-->
-<!--          <h4 class="pbmit-subtitle">Blogs</h4>-->
-<!--          <h2 class="pbmit-title">News And Article</h2>-->
-<!--        </div>-->
-<!--        <div class="row">-->
-<!--          <article class="pbmit-blog-style-6 col-md-12">-->
-<!--            <div class="post-item">-->
-<!--              <div class="pbmit-blog-content d-flex align-items-center">-->
-<!--                <div class="pbmit-meta-date-wrapper">-->
-<!--                  <span class="pbmit-day-wrap">17</span>-->
-<!--                  <span class="pbmit-date-wrap">Apr 2023</span>-->
-<!--                </div>-->
-<!--                <div class="pbmit-featured-img-wrapper">-->
-<!--                  <div class="pbmit-featured-wrapper">-->
-<!--                    <img src="images/creative-studio/blog/blog-01.jpg" class="img-fluid" alt="" />-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--                <div class="pbmit-box-content-wrapper">-->
-<!--                  <div class="pbmit-category-comment-wraper d-flex align-items-center">-->
-<!--                    <div class="pbmit-meta-cat-wrapper pbmit-meta-line">-->
-<!--                      <div class="pbmit-meta-category"><a href="blog-grid-col-3.html" rel="category tag">Development</a></div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                  <h3 class="pbmit-post-title"><a href="blog-single-details.html">Our Top10 Great Examples of Responsive Websites</a></h3>-->
-<!--                </div>-->
-<!--                <div class="pbmit-svg-btn">-->
-<!--                  <a href="blog-single-details.html" class="pbmit-btn pbmit-white-white-bg">-->
-<!--                    <span class="pbmit-header-button2-text">Read Continue</span>-->
-<!--                  </a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </article>-->
-<!--          <article class="pbmit-blog-style-6 col-md-12">-->
-<!--            <div class="post-item">-->
-<!--              <div class="pbmit-blog-content d-flex align-items-center">-->
-<!--                <div class="pbmit-meta-date-wrapper">-->
-<!--                  <span class="pbmit-day-wrap">09</span>-->
-<!--                  <span class="pbmit-date-wrap">Mar 2023</span>-->
-<!--                </div>-->
-<!--                <div class="pbmit-featured-img-wrapper">-->
-<!--                  <div class="pbmit-featured-wrapper">-->
-<!--                    <img src="images/creative-studio/blog/blog-02.jpg" class="img-fluid" alt="" />-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--                <div class="pbmit-box-content-wrapper">-->
-<!--                  <div class="pbmit-category-comment-wraper d-flex align-items-center">-->
-<!--                    <div class="pbmit-meta-cat-wrapper pbmit-meta-line">-->
-<!--                      <div class="pbmit-meta-category"><a href="blog-grid-col-3.html" rel="category tag">Designing</a></div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                  <h3 class="pbmit-post-title"><a href="blog-single-details.html">We Make 5 Web Design Blogs You Should Be Reading</a></h3>-->
-<!--                </div>-->
-<!--                <div class="pbmit-svg-btn">-->
-<!--                  <a href="blog-single-details.html" class="pbmit-btn pbmit-white-white-bg">-->
-<!--                    <span class="pbmit-header-button2-text">Read Continue</span>-->
-<!--                  </a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </article>-->
-<!--          <article class="pbmit-blog-style-6 col-md-12">-->
-<!--            <div class="post-item">-->
-<!--              <div class="pbmit-blog-content d-flex align-items-center">-->
-<!--                <div class="pbmit-meta-date-wrapper">-->
-<!--                  <span class="pbmit-day-wrap">30</span>-->
-<!--                  <span class="pbmit-date-wrap">May 2023</span>-->
-<!--                </div>-->
-<!--                <div class="pbmit-featured-img-wrapper">-->
-<!--                  <div class="pbmit-featured-wrapper">-->
-<!--                    <img src="images/creative-studio/blog/blog-03.jpg" class="img-fluid" alt="" />-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--                <div class="pbmit-box-content-wrapper">-->
-<!--                  <div class="pbmit-category-comment-wraper d-flex align-items-center">-->
-<!--                    <div class="pbmit-meta-cat-wrapper pbmit-meta-line">-->
-<!--                      <div class="pbmit-meta-category"><a href="blog-grid-col-3.html" rel="category tag">Branding</a></div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                  <h3 class="pbmit-post-title"><a href="blog-single-details.html">7 Ways To Improve Website Usability Accessibility</a></h3>-->
-<!--                </div>-->
-<!--                <div class="pbmit-svg-btn">-->
-<!--                  <a href="blog-single-details.html" class="pbmit-btn pbmit-white-white-bg">-->
-<!--                    <span class="pbmit-header-button2-text">Read Continue</span>-->
-<!--                  </a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </article>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </section>-->
-<!--    &lt;!&ndash; Blog End &ndash;&gt;-->
-
-
     <!-- Tween Effect Start -->
+    <section id="apply"></section>
     <section class="creative-studio-tween-effect overflow-hidden pbmit-bg-color-white">
       <div class="container creative-studio-tween-effect-inner">
         <div class="pbmit-tween-effect-style-1">
-          <div class="tween-text tween-image pbmit-tween-effect" data-x-start="-10" data-x-end="10" data-y-start="0" data-y-end="0" data-scale-x-start="1" data-scale-x-end=" 1" data-skew-x-start=" 0deg" data-skew-x-end="0deg" data-skew-y-start=" 0deg" data-skew-y-end=" 0deg" data-rotate-x-start="0" data-rotate-x-end="0" style="transform: translate(30%, 0%);">
+          <div class="tween-text tween-image pbmit-tween-effect"
+               data-x-start="-10"
+               data-x-end="10"
+               data-y-start="0"
+               data-y-end="0"
+               data-scale-x-start="1"
+               data-scale-x-end=" 1"
+               data-skew-x-start=" 0deg"
+               data-skew-x-end="0deg"
+               data-skew-y-start=" 0deg"
+               data-skew-y-end=" 0deg"
+               data-rotate-x-start="0"
+               data-rotate-x-end="0"
+               style="transform: translate(30%, 0%);">
             <h3 class="pbmit-element-title">Serving our nation's need</h3>
           </div>
         </div>
@@ -1817,11 +1038,12 @@
           </div>
         </div>
         <div class="pbmit-svg-btn">
-          <a href="https://www.youtube-nocookie.com/embed/SZEflIVnhH8" class="pbmit-outline-btn">
-                        <span class="button-content-wrapper">
-                           Entrance Requirements<span class="pbmit-button-hover"></span>
-                        </span>
-          </a>
+            <a href="#apply" data-modal-content="apply" class="pbmit-outline-btn">
+              <span class="button-content-wrapper">
+                  Entrance Requirements<span class="pbmit-button-hover"></span>
+              </span>
+            </a>
+
         </div>
       </div>
     </section>
@@ -1832,14 +1054,10 @@
       <div class="container-fluid g-0">
         <div class="pbmit-element-reel-video-style-1">
           <div class="pbmit-element-inner">
-            <!--            <div class="pbmit-element-posts-wrapper" data-cursor-text="Original Photo">-->
             <div class="pbmit-reel-video-contant">
-              <!--                <div class="pbmit-reel-video-heading">-->
-              <!--                  <h2 class="pbmit-element-title">KAN lab's Group Photo</h2>-->
-              <!--                </div>-->
               <div class="pbmit-tag-wrapper">
                 <div class="pbmit-heading-desc">10/2022, Beijing, China</div>
-<!--                <div class="pbmit-heading-desc">Foret Environment Sensing and Its Information Processing Lab<br>Beijing Forestry University</div>-->
+                <div class="pbmit-heading-desc">Foret Environment Sensing and Its Information Processing Lab<br>Beijing Forestry University</div>
               </div>
               <div class="pbmit-reel-title-wrap">
                 <h2 class="pbmit-reel-title pbmit-reel-t1">Welcome to</h2>
@@ -1849,8 +1067,6 @@
                 <iframe loading="lazy" width="1000" height="300" src="images/group_photo.jpeg" style="transform: translate3d(0px, 0px, 0px) scale(1, 1);"></iframe>
               </div>
             </div>
-            <!--              <a class="pbmit-lightbox-video pbmit-link" href="images/group_photo.jpeg"></a>-->
-            <!--            </div>-->
           </div>
         </div>
       </div>
@@ -1861,6 +1077,7 @@
   <!-- Page Content End -->
 
   <!-- footer -->
+
   <footer class="footer site-footer footer-style-1 pbmit-bg-color-blackish">
     <div class="pbmit-footer-widget-area">
       <div class="container">
@@ -1868,10 +1085,10 @@
           <div class="pbmit-footer-widget pbmit-footer-widget-col-1 col-md-6 col-lg-3">
             <div class="widget">
               <div class="pbmit-footer-logo">
-                <img src="images/logo-white.svg" alt="Digital Studio" title="Digital Studio">
+                <img src="images/creative-studio/bjfu_logo.png">
               </div>
               <div class="pbmit-contact-widget-lines">
-                <div class="pbmit-contact-widget-line pbmit-contact-widget-address">🗺：No. 35 Tsinghua East Road, Haidian District, Beijing 100083, China <a href="https://j.map.baidu.com/99/wunK">View On Map</a></div>
+                <div class="pbmit-contact-widget-line pbmit-contact-widget-address">🗺：No. 35 Tsinghua East Road, Haidian District, Beijing 100083, China <a href="https://j.map.baidu.com/9e/sjnK">View On Map</a></div>
 <!--                <div class="pbmit-contact-widget-line pbmit-contact-widget-phone">📞：010-6233-6137</div>-->
                 <div class="pbmit-contact-widget-line pbmit-contact-widget-email">📞：010-6233-6137</div>
                 <div class="pbmit-contact-widget-line pbmit-contact-widget-email">📧：Jmkan [at] bjfu [dot] edu [dot] cn</div>
@@ -1932,52 +1149,35 @@
               <div class="pbmit-footer-copyright-text-area"> ©Copyright 2023 The <a href="#"><u>Digiwize</u></a> All Rights By <a href="http://www.bootstrapmb.com">bootstrapMB</a></div>
               <div class="pbmit-footer-copyright-text-area"> Secondary development by <a href="https://charmingzh.github.io/">Jiaming Zhang</a></div>
             </div>
-            <div class="col-md-4 text-md-end text-center">
-              <div class=" pbmit-footer-social-area">
-                <ul class="pbmit-social-links">
-                  <li class="pbmit-social-li pbmit-social-facebook ">
-                    <a href="#" target="_blank"><span><i class="pbmit-base-icon-facebook-f"></i></span></a>
-                  </li>
-                  <li class="pbmit-social-li pbmit-social-twitter ">
-                    <a href="#" target="_blank"><span><i class="pbmit-base-icon-twitter"></i></span></a>
-                  </li>
-                  <li class="pbmit-social-li pbmit-social-linkedin ">
-                    <a href="#" target="_blank"><span><i class="pbmit-base-icon-linkedin-in"></i></span></a>
-                  </li>
-                  <li class="pbmit-social-li pbmit-social-instagram ">
-                    <a href="#" target="_blank"><span><i class="pbmit-base-icon-instagram"></i></span></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+<!--            快捷链接-->
+<!--            <div class="col-md-4 text-md-end text-center">-->
+<!--              <div class=" pbmit-footer-social-area">-->
+<!--                <ul class="pbmit-social-links">-->
+<!--                  <li class="pbmit-social-li pbmit-social-facebook ">-->
+<!--                    <a href="#" target="_blank"><span><i class="pbmit-base-icon-facebook-f"></i></span></a>-->
+<!--                  </li>-->
+<!--                  <li class="pbmit-social-li pbmit-social-twitter ">-->
+<!--                    <a href="#" target="_blank"><span><i class="pbmit-base-icon-twitter"></i></span></a>-->
+<!--                  </li>-->
+<!--                  <li class="pbmit-social-li pbmit-social-linkedin ">-->
+<!--                    <a href="#" target="_blank"><span><i class="pbmit-base-icon-linkedin-in"></i></span></a>-->
+<!--                  </li>-->
+<!--                  <li class="pbmit-social-li pbmit-social-instagram ">-->
+<!--                    <a href="#" target="_blank"><span><i class="pbmit-base-icon-instagram"></i></span></a>-->
+<!--                  </li>-->
+<!--                </ul>-->
+<!--              </div>-->
+<!--            </div>-->
           </div>
         </div>
       </div>
     </div>
   </footer>
+  <section id="Contact"></section>
   <!-- footer End -->
 
 </div>
 <!-- page wrapper End -->
-
-<!-- Search Box Start Here -->
-<div class="pbmit-search-overlay">
-  <div class="pbmit-search-close">
-    <svg class="qodef-svg--close qodef-m" xmlns="https://www.w3.org/2000/svg" width="28.163" height="28.163" viewBox="0 0 26.163 26.163">
-      <rect width="36" height="1" transform="translate(0.707) rotate(45)"></rect>
-      <rect width="36" height="1" transform="translate(0 25.456) rotate(-45)"></rect>
-    </svg>
-  </div>
-  <div class="pbmit-search-outer">
-    <form class="pbmit-site-searchform">
-      <input type="search" class="form-control field searchform-s" name="s" placeholder="Search …">
-      <button type="submit">
-        <i class="pbmit-base-icon-search-1"></i>
-      </button>
-    </form>
-  </div>
-</div>
-<!-- Search Box End Here -->
 
 <!-- Scroll To Top -->
 <div class="pbmit-progress-wrap">
@@ -1990,6 +1190,35 @@
 <!-- JS
    ============================================ -->
 <!-- jQuery JS -->
+<script src="js/FrostModals.min.js"></script>
+<script src="js/Windows.js"></script>
+<!--<script>-->
+<!--  "use strict";-->
+
+<!--  var FrostifyModal = new FrostifyModals();-->
+
+<!--  // 定义一个函数来设置和显示模态窗口-->
+<!--  function showModal(event) {-->
+<!--    // 阻止链接的默认行为-->
+<!--    event.preventDefault();-->
+
+<!--    FrostifyModal.set({-->
+<!--      title: '可拖拽的弹出窗口',-->
+<!--      content: 'Lorem ipsum dolor sit amet,www.bootstrapmb.com consectetur adipisicing elit. Accusantium ad amet, aut delectus deserunt doloremque eos' +-->
+<!--              '    eum facere fuga minus mollitia nemo numquam obcaecati, omnis quod saepe sit, voluptate. Nihil!',-->
+<!--      onok: () => {},-->
+<!--      oncancel: () => {},-->
+<!--      isClosable: true,-->
+<!--      isDraggable: true,-->
+<!--      reverseButtons: false,-->
+<!--      labels: {-->
+<!--        ok: '好的',-->
+<!--        cancel: '关闭'-->
+<!--      },-->
+<!--    }).show();-->
+<!--  }-->
+<!--  document.querySelector('.pbmit-service-title a[href="#showModalBtn"]').addEventListener('click', showModal);-->
+<!--</script>-->
 <script src="js/jquery.min.js"></script>
 <!-- Popper JS -->
 <script src="js/popper.min.js"></script>

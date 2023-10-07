@@ -1,5 +1,5 @@
 /******************************
-    ¸ü¶àÏÂÔØ£ºHttp://www.bootstrapmb.com
+    ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø£ï¿½Http://www.bootstrapmb.com
     00 - Home
     01 - Inner Page
         00 - About Us
@@ -1020,10 +1020,10 @@
 .creative-studio-flipbox{
     background-image: url(../images/creative-studio/pbmit-flip-bx-bg.png);
     background-repeat: no-repeat;
-    padding: 50px 0px 150px 0px;
+    padding: 50px 0px 0px 0px;
 }
 .creative-studio-flipbox .pbmit-column-inner{
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 .creative-studio-flipbox .pbmit-column-inner:nth-child(2){
     background-color: var(--pbmit-blackish-color);

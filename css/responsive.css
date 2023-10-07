@@ -891,11 +891,11 @@ body {
 
 @media(max-width:1024px) {
 	.section-lgx {
-		padding-top: 80px;
-		padding-bottom: 80px;
+		padding-top: 0px;
+		padding-bottom: 0px;
 	}
 	.section-lgt {
-		padding-top: 80px;
+		padding-top: 00px;
 	}
 	/* Header */
 	.pbmit-burger-menu-area{
@@ -929,7 +929,7 @@ body {
 		display: none;
 	}
 	.digital-agency-service{
-		padding: 100px 0 80px;
+		padding: 10px 0 80px;
 	}
 	.digital-studio-portfolio .pbmit-heading-subheading .pbmit-title{
 		font-size: 80px;
@@ -1053,8 +1053,8 @@ body {
 		padding-bottom:70px;
 	}
 	.section-lgx{ 
-		padding-top: 80px; 
-		padding-bottom:80px;
+		padding-top: 0px;
+		padding-bottom:0px;
 	}
 	.section-lgt{ 
 		padding-top: 80px; 
@@ -1176,7 +1176,7 @@ body {
 		padding: 120px 50px 0px 50px;
 	}
 	.creative-studio-flipbox{
-		padding: 0 0 80px 0;
+		padding: 0 0 0px 0;
 	}
 	/* Modern Digital Agency */
 	.modern-digital-agency-welcome .modern-digital-agency-welcome-inner{
@@ -1522,8 +1522,8 @@ body {
 		padding-bottom:60px;
 	}
 	.section-lgx {
-		padding-top: 60px;
-		padding-bottom: 60px;
+		padding-top: 0px;
+		padding-bottom: 0px;
 	}
 	.section-mdb{
 		padding-bottom:30px;

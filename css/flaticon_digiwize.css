@@ -181,7 +181,8 @@ i[class^="flaticon_digiwize-"]:before, i[class*=" pbmit-digiwize-icon-"]:before 
     content: "\f136";
 }
 .pbmit-digiwize-icon-customer-behavior:before {
-    content: "\f137";
+    /*content: "\f137";*/
+    content: "\f1bb";
 }
 .pbmit-digiwize-icon-performance:before {
     content: "\f138";
